@@ -6,5 +6,11 @@ target 'CampusRecruitmentSystem' do
   use_frameworks!
 
 pod 'Firebase/Core'
+pod 'ObjectMapper', '~> 2.2'
+pod 'RxSwift',    '~> 3.0'
+pod 'RxCocoa',    '~> 3.0'
+pod 'IQKeyboardManagerSwift'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
 end
