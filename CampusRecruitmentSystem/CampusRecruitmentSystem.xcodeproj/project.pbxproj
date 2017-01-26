@@ -20,6 +20,13 @@
 		849879E31E39D19800092BC8 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E21E39D19800092BC8 /* UserServices.swift */; };
 		849879E51E39EBFE00092BC8 /* UserRequestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E41E39EBFE00092BC8 /* UserRequestServices.swift */; };
 		849879E71E39F90800092BC8 /* AdminServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E61E39F90800092BC8 /* AdminServices.swift */; };
+		849879EC1E3A20AA00092BC8 /* CompanySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879EB1E3A20AA00092BC8 /* CompanySignUpViewController.swift */; };
+		849879EE1E3A25F200092BC8 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879ED1E3A25F200092BC8 /* PostsViewController.swift */; };
+		849879F01E3A261200092BC8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879EF1E3A261200092BC8 /* PostTableViewCell.swift */; };
+		849879F21E3A325200092BC8 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879F11E3A325200092BC8 /* StudentsViewController.swift */; };
+		849879F41E3A326D00092BC8 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879F31E3A326D00092BC8 /* StudentsTableViewCell.swift */; };
+		849879F61E3A365700092BC8 /* stuReqTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879F51E3A365700092BC8 /* stuReqTableViewCell.swift */; };
+		849879F81E3A366900092BC8 /* stuReqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879F71E3A366900092BC8 /* stuReqViewController.swift */; };
 		84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */; };
 		84C72C061E38D89700B608A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C051E38D89700B608A8 /* User.swift */; };
 		84C72C091E38DC1F00B608A8 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C081E38DC1F00B608A8 /* AuthServices.swift */; };
@@ -50,6 +57,14 @@
 		849879E21E39D19800092BC8 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		849879E41E39EBFE00092BC8 /* UserRequestServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequestServices.swift; sourceTree = "<group>"; };
 		849879E61E39F90800092BC8 /* AdminServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminServices.swift; sourceTree = "<group>"; };
+		849879E81E3A138F00092BC8 /* CampusRecruitmentSystem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CampusRecruitmentSystem-Bridging-Header.h"; sourceTree = "<group>"; };
+		849879EB1E3A20AA00092BC8 /* CompanySignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySignUpViewController.swift; sourceTree = "<group>"; };
+		849879ED1E3A25F200092BC8 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		849879EF1E3A261200092BC8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		849879F11E3A325200092BC8 /* StudentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		849879F31E3A326D00092BC8 /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
+		849879F51E3A365700092BC8 /* stuReqTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stuReqTableViewCell.swift; sourceTree = "<group>"; };
+		849879F71E3A366900092BC8 /* stuReqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stuReqViewController.swift; sourceTree = "<group>"; };
 		84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
 		84C72C051E38D89700B608A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84C72C081E38DC1F00B608A8 /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
@@ -99,6 +114,13 @@
 				84595DE71E38C7F100566AC3 /* ViewController.swift */,
 				84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */,
 				849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */,
+				849879EB1E3A20AA00092BC8 /* CompanySignUpViewController.swift */,
+				849879ED1E3A25F200092BC8 /* PostsViewController.swift */,
+				849879EF1E3A261200092BC8 /* PostTableViewCell.swift */,
+				849879F11E3A325200092BC8 /* StudentsViewController.swift */,
+				849879F31E3A326D00092BC8 /* StudentsTableViewCell.swift */,
+				849879F51E3A365700092BC8 /* stuReqTableViewCell.swift */,
+				849879F71E3A366900092BC8 /* stuReqViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -158,6 +180,7 @@
 				84595DEC1E38C7F100566AC3 /* Assets.xcassets */,
 				84595DEE1E38C7F100566AC3 /* LaunchScreen.storyboard */,
 				84595DF11E38C7F100566AC3 /* Info.plist */,
+				849879E81E3A138F00092BC8 /* CampusRecruitmentSystem-Bridging-Header.h */,
 			);
 			path = CampusRecruitmentSystem;
 			sourceTree = "<group>";
@@ -210,6 +233,7 @@
 					84595DE11E38C7F100566AC3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SUBZ24DP5B;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -299,16 +323,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849879EE1E3A25F200092BC8 /* PostsViewController.swift in Sources */,
 				84D03BAF1E3916FD00B58916 /* CompanyServices.swift in Sources */,
+				849879F61E3A365700092BC8 /* stuReqTableViewCell.swift in Sources */,
 				84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */,
 				849879E71E39F90800092BC8 /* AdminServices.swift in Sources */,
 				849879E11E39CB9F00092BC8 /* CreatePostViewController.swift in Sources */,
+				849879EC1E3A20AA00092BC8 /* CompanySignUpViewController.swift in Sources */,
 				849879DF1E39C5D400092BC8 /* Constant.swift in Sources */,
+				849879F21E3A325200092BC8 /* StudentsViewController.swift in Sources */,
 				84C72C111E39023200B608A8 /* UserType.swift in Sources */,
 				8429A5931E38CF5900476288 /* TCButton.swift in Sources */,
 				84C72C0B1E38DD6B00B608A8 /* FirebaseRoutes.swift in Sources */,
+				849879F41E3A326D00092BC8 /* StudentsTableViewCell.swift in Sources */,
 				84D03BB11E391A3B00B58916 /* Post.swift in Sources */,
+				849879F01E3A261200092BC8 /* PostTableViewCell.swift in Sources */,
 				84C72C0F1E38FEBA00B608A8 /* Company.swift in Sources */,
+				849879F81E3A366900092BC8 /* stuReqViewController.swift in Sources */,
 				84C72C091E38DC1F00B608A8 /* AuthServices.swift in Sources */,
 				84C72C0D1E38F69300B608A8 /* Student.swift in Sources */,
 				84D03BAD1E3914F700B58916 /* Admin.swift in Sources */,
@@ -441,11 +472,14 @@
 			baseConfigurationReference = A50D420644B48B316DE31FA3 /* Pods-CampusRecruitmentSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SUBZ24DP5B;
 				INFOPLIST_FILE = CampusRecruitmentSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CampusRecruitmentSystem.CampusRecruitmentSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CampusRecruitmentSystem/CampusRecruitmentSystem-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -455,11 +489,13 @@
 			baseConfigurationReference = 4BABFC268AC6793A0E62FF06 /* Pods-CampusRecruitmentSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SUBZ24DP5B;
 				INFOPLIST_FILE = CampusRecruitmentSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CampusRecruitmentSystem.CampusRecruitmentSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CampusRecruitmentSystem/CampusRecruitmentSystem-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

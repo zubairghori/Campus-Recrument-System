@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,6 +52,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1B1BC43F5D68B6B47235100449B2CB61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
 		<dict>
 			<key>primary</key>
@@ -57,22 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAA9BCE660CBF8DA999E1AF08CE95601</key>
+		<key>8DBA1D00B2731EC21929C6694BFDB1B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEFE18F28A7B1AB2E42456569D51FAF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E30CA1A9FD95C1FF06C2A8847196943B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8FDE38B64433A0B0B160BE1EE934069</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA527FA02394595E92D086A18DC3890B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

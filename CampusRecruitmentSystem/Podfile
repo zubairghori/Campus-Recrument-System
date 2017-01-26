@@ -12,5 +12,5 @@ pod 'RxCocoa',    '~> 3.0'
 pod 'IQKeyboardManagerSwift'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-
+pod 'MBProgressHUD', '~> 1.0.0'
 end

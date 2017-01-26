@@ -9,8 +9,7 @@
 import UIKit
 
 class CreatePostViewController: UIViewController {
-    @IBOutlet weak var tile: TTextField!
-
+    @IBOutlet weak var postTitle: TTextField!
     @IBOutlet weak var salary: TTextField!
     @IBOutlet weak var technology: TTextField!
     @IBOutlet weak var descriptionPost: TTextField!
@@ -49,12 +48,18 @@ class CreatePostViewController: UIViewController {
     @IBAction func createPost(_ sender: Any) {
         
         if let company = User.sharedUser.value as? Company{
-            let post = Post(title: "Most Senior iOS Developer", description: "2+ experience required", salary: 50000, technology: "Swift 3")
+            let post = Post(title: self.postTitle.text!, description: self.descriptionPost.text!, salary: Int(self.salary.text!)!, technology: self.technology.text!)
             let companyId = company.companyId!
-//            CompanyServices.createPost(cID: companyId, post: post, completion: { (error) in
-//                print(error)
-//            })
-//            
+           indicatorStart()
+            CompanyServices.createPost(cID: companyId, post: post, completion: { (error) in
+                if error == nil{
+                    self.navigationController?.popViewController(animated: true)
+                }else{
+                    ErrorAlert(message: error!)
+                }
+                indicatorStop()
+            })
+            
 //            CompanyServices.updatePost(cID: "-KbOjoOD6Ts4sa74Wj0A", pID: "-KbOkOMy96vqy3CA1als", post: post, completion: { (error) in
 //                
 //            })

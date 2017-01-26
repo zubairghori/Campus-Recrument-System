@@ -17,6 +17,7 @@ class StudentSignUpViewController: UIViewController {
     @IBOutlet weak var rollNo: TTextField!
     @IBOutlet weak var mobileNo: TTextField!
     @IBOutlet weak var cgpa: TTextField!
+    @IBOutlet weak var year: TTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +26,23 @@ class StudentSignUpViewController: UIViewController {
     }
 
     @IBAction func signup(_ sender: Any) {
-        
 
-//        let company = Company(compmanyName: "Tensperl", companyEmail: "tensperl@gmail.com", companyNo: 12331, detail: "software comany", name: "sadiq", email: "sadiq@gmail.com", password: "123456", mobileNo: "1233434432", userType: .company)
-//        
-//        AuthServices.signUp(userObject: company) { (error) in
-//            print(error)
-//        }
         
-//        let stu = Student(rollNo: "b11108810", cgpa: "3.2", year: 2015, courseName: "BSCS", name: "zubair", email: "waqar@gmail.com", password: "123456", mobileNo: "03132635297", userType: .student)
-//        
-//        AuthServices.signUp(userObject:stu) { (error) in
-//            print(error)
-//        }
+        let stu = Student(rollNo: self.rollNo.text!, cgpa: self.cgpa.text!, year: Int(self.year.text!)! , courseName: "BSCS", name: self.name.text!, email: self.email.text!, password: self.password.text!  , mobileNo: self.mobileNo.text!, userType: .student)
+        indicatorStart()
+        AuthServices.signUp(userObject:stu) { (error) in
+
+            if error == nil{
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                ErrorAlert(message: error!)
+            }
+            indicatorStop()
+
+        }
+        
+        
+        
     }
     
     

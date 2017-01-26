@@ -52,10 +52,10 @@ class CompanyServices {
         self.ref.child("company-Post/\(cID)").observe(.childAdded, with: { (post) in
             let postObj = Mapper<Post>().map(JSONObject: post.value!)
             postObj!.postID = post.key
-            User.posts.value = [post.key:postObj!]
+            User.posts.value[post.key] = postObj
         })
         self.ref.child("company-Post/\(cID)").observe(.childRemoved, with: { (post) in
-            User.posts.value?.removeValue(forKey: post.key)
+            User.posts.value.removeValue(forKey: post.key)
         })
     }
     
@@ -65,7 +65,11 @@ class CompanyServices {
                 return rxOwnerCompany(user:user)
             })
             .subscribe { (user) in
-                User.sharedCompanies.value = [user.element!.userID!:user.element!]
+                if User.sharedCompanies.value[user.element!.userID!] == nil{
+                   User.sharedCompanies.value[user.element!.userID!] = user.element!
+                }else{
+                    User.sharedCompanies.value[user.element!.userID!] = user.element!
+                }
         }
     }
     
