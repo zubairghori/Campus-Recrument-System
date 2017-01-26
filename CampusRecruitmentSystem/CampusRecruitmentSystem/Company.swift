@@ -16,7 +16,7 @@ class Company:User {
     var companyEmail:String?
     var companyNo:Int?
     var detail:String?
-    
+    var companyId:String?
     
     init(compmanyName:String,companyEmail:String,companyNo:Int,detail:String,name:String,email:String,password:String,mobileNo:String,userType:UserType) {
         self.compmanyName = compmanyName

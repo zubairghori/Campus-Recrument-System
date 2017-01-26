@@ -23,11 +23,12 @@ class AuthServices {
                 let companyDic:[String : Any] = ["companyEmail":userObject.companyEmail,"compmanyName":userObject.compmanyName!,"companyNo":userObject.companyNo!,"detail":userObject.detail]
                 
                 let multiPath: [String:Any]  =
-                    ["users/\(user!.uid)" : userDic , "company/\(user!.uid)":companyDic]
+                    ["users/\(user!.uid)" : userDic , "company/\(user!.uid)/\(self.ref.childByAutoId().key)":companyDic]
                 
                 self.ref.updateChildValues(multiPath, withCompletionBlock: { (error, refrence) in
                     if error == nil{
                         comletion(nil)
+                        User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
                         User.sharedUser.value = userObject
                     }else{
                         comletion(error!.localizedDescription)
@@ -54,6 +55,7 @@ class AuthServices {
                 self.ref.updateChildValues(multiPath, withCompletionBlock: { (error, refrence) in
                     if error == nil{
                         comletion(nil)
+                        User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
                         User.sharedUser.value = userObject
                     }else{
                         comletion(error!.localizedDescription)
@@ -82,17 +84,27 @@ class AuthServices {
                         case .student:
                             self.ref.child("acedemics/\(user!.uid)").observeSingleEvent(of: .value, with: { (student) in
                                 let stu = userObj! + Mapper<Student>().map(JSONObject: student.value!)!
+                                User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
                                 User.sharedUser.value = stu
                                 completion(stu, nil)
                             })
                         case .company:
                             self.ref.child("company/\(user!.uid)").observeSingleEvent(of: .value, with: { (company) in
-                                let com = userObj! + Mapper<Company>().map(JSONObject: company.value!)!
+                                let obj = company.value as? [String:Any]
+                                let comId = Array(obj!.keys)[0]
+                                let comObj = Array(obj!.values)[0]
+                                let com = userObj! + Mapper<Company>().map(JSONObject: comObj)!
+                                com.companyId = comId
                                 User.sharedUser.value = com
+                                User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
+                                CompanyServices.postlistner(cID: comId)
+                                CompanyServices.listnerForCompanies()
+                                UserServices.listnerForStudent()
+                                
                                 completion(com, nil)
                             })
                         case .admin:
-                            User.sharedUser.value = userObj
+//                            User.sharedUser.value = Admin
                             completion(userObj, nil)
                         }
                     }

@@ -19,24 +19,33 @@ class ViewController: UIViewController {
 
     @IBAction func login(_ sender: Any) {
   
-        AuthServices.signIn(email: "zubair@gmail.com", password: "123456") { (user, error) in
+        AuthServices.signIn(email: "sadiq@gmail.com", password: "123456") { (user, error) in
            
             if let stu = user as? Student{
                 print(stu.cgpa)
             }
             else if let com = user as? Company{
                 print(com.compmanyName)
+                self.performSegue(withIdentifier: "createPost", sender: nil)
+                
             }else {
                 
             }
             
         }
         
+//        User.sharedCompanies.asObservable().subscribe { (companies) in
+//            print(companies)
+//        }
 //        User.sharedUser.asObservable().subscribe { (user) in
 //            let com = user as? Company
 //            print(com?.compmanyName)
 //        }
         
+//        User.sharedStudents.asObservable().subscribe { (stuArr) in
+//            print(stuArr)
+//        }
+//
     }
 
     @IBAction func tap(_ sender: Any) {

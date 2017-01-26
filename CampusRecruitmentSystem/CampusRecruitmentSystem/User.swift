@@ -17,9 +17,15 @@ class User:Mappable{
     var password:String?
     var mobileNo:String?
     var userType:UserType?
+    var userID:String?
     
     static var sharedUser = Variable<User?>(nil)
-    
+    static var posts = Variable<[String:Post]?>(nil)
+    static var sharedStudents = Variable<[String:Student]>([:])
+    static var sharedCompanies = Variable<[String:Company]>([:])
+    static var sharedUserIDRequest = Variable<[String]>([])
+    static var sharedComapyIDRequest = Variable<[String]>([])
+
     init(name:String,email:String,password:String,mobileNo:String,userType:UserType) {
         self.name = name
         self.email = email
@@ -45,6 +51,7 @@ func +(user:User,student:Student)->Student{
     stu.email = user.email
     stu.userType = user.userType
     stu.mobileNo = user.mobileNo
+    stu.userID = user.userID
     return stu
 }
 func +(user:User,company:Company)->Company{
@@ -53,5 +60,6 @@ func +(user:User,company:Company)->Company{
     company.email = user.email
     company.userType = user.userType
     company.mobileNo = user.mobileNo
+    company.userID = user.userID
     return company
 }

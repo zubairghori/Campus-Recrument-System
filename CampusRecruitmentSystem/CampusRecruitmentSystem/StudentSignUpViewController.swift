@@ -27,17 +27,17 @@ class StudentSignUpViewController: UIViewController {
     @IBAction func signup(_ sender: Any) {
         
 
-        let company = Company(compmanyName: "Panacloud", companyEmail: "panacloud@gmail.com", companyNo: 12331, detail: "software comany", name: "zubair", email: "zubair@gmail.com", password: "123456", mobileNo: "1233434432", userType: .company)
+//        let company = Company(compmanyName: "Tensperl", companyEmail: "tensperl@gmail.com", companyNo: 12331, detail: "software comany", name: "sadiq", email: "sadiq@gmail.com", password: "123456", mobileNo: "1233434432", userType: .company)
+//        
+//        AuthServices.signUp(userObject: company) { (error) in
+//            print(error)
+//        }
         
-        AuthServices.signUp(userObject: company) { (error) in
-            print(error)
-        }
-        
-        let stu = Student(rollNo: "b11101110", cgpa: "3.2", year: 2015, courseName: "BSCS", name: "zubair", email: "zubairghori93@gmail.com", password: "123456", mobileNo: "03132635297", userType: .student)
-        
-        AuthServices.signUp(userObject:stu) { (error) in
-            print(error)
-        }
+//        let stu = Student(rollNo: "b11108810", cgpa: "3.2", year: 2015, courseName: "BSCS", name: "zubair", email: "waqar@gmail.com", password: "123456", mobileNo: "03132635297", userType: .student)
+//        
+//        AuthServices.signUp(userObject:stu) { (error) in
+//            print(error)
+//        }
     }
 
 }

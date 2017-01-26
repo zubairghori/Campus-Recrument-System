@@ -15,6 +15,10 @@
 		84595DF01E38C7F100566AC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595DEE1E38C7F100566AC3 /* LaunchScreen.storyboard */; };
 		84595DF81E38C8BD00566AC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84595DF71E38C8BD00566AC3 /* GoogleService-Info.plist */; };
 		84595DFA1E38CE3200566AC3 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595DF91E38CE3200566AC3 /* TTextField.swift */; };
+		849879DF1E39C5D400092BC8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879DE1E39C5D400092BC8 /* Constant.swift */; };
+		849879E11E39CB9F00092BC8 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */; };
+		849879E31E39D19800092BC8 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E21E39D19800092BC8 /* UserServices.swift */; };
+		849879E51E39EBFE00092BC8 /* UserRequestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E41E39EBFE00092BC8 /* UserRequestServices.swift */; };
 		84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */; };
 		84C72C061E38D89700B608A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C051E38D89700B608A8 /* User.swift */; };
 		84C72C091E38DC1F00B608A8 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C081E38DC1F00B608A8 /* AuthServices.swift */; };
@@ -22,6 +26,9 @@
 		84C72C0D1E38F69300B608A8 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C0C1E38F69300B608A8 /* Student.swift */; };
 		84C72C0F1E38FEBA00B608A8 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C0E1E38FEBA00B608A8 /* Company.swift */; };
 		84C72C111E39023200B608A8 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C101E39023200B608A8 /* UserType.swift */; };
+		84D03BAD1E3914F700B58916 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D03BAC1E3914F700B58916 /* Admin.swift */; };
+		84D03BAF1E3916FD00B58916 /* CompanyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D03BAE1E3916FD00B58916 /* CompanyServices.swift */; };
+		84D03BB11E391A3B00B58916 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D03BB01E391A3B00B58916 /* Post.swift */; };
 		DA5E30FDEFA52F3EC94D905C /* Pods_CampusRecruitmentSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46B738C1EBDD1CA5D06224C /* Pods_CampusRecruitmentSystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,10 @@
 		84595DF11E38C7F100566AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84595DF71E38C8BD00566AC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84595DF91E38CE3200566AC3 /* TTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
+		849879DE1E39C5D400092BC8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		849879E21E39D19800092BC8 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		849879E41E39EBFE00092BC8 /* UserRequestServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequestServices.swift; sourceTree = "<group>"; };
 		84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
 		84C72C051E38D89700B608A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84C72C081E38DC1F00B608A8 /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
@@ -44,6 +55,9 @@
 		84C72C0C1E38F69300B608A8 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		84C72C0E1E38FEBA00B608A8 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		84C72C101E39023200B608A8 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
+		84D03BAC1E3914F700B58916 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		84D03BAE1E3916FD00B58916 /* CompanyServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyServices.swift; sourceTree = "<group>"; };
+		84D03BB01E391A3B00B58916 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A50D420644B48B316DE31FA3 /* Pods-CampusRecruitmentSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusRecruitmentSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusRecruitmentSystem/Pods-CampusRecruitmentSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		B46B738C1EBDD1CA5D06224C /* Pods_CampusRecruitmentSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusRecruitmentSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +96,7 @@
 			children = (
 				84595DE71E38C7F100566AC3 /* ViewController.swift */,
 				84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */,
+				849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -93,6 +108,7 @@
 				8429A5921E38CF5900476288 /* TCButton.swift */,
 				84C72C0A1E38DD6B00B608A8 /* FirebaseRoutes.swift */,
 				84C72C101E39023200B608A8 /* UserType.swift */,
+				849879DE1E39C5D400092BC8 /* Constant.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -103,6 +119,8 @@
 				84C72C051E38D89700B608A8 /* User.swift */,
 				84C72C0C1E38F69300B608A8 /* Student.swift */,
 				84C72C0E1E38FEBA00B608A8 /* Company.swift */,
+				84D03BAC1E3914F700B58916 /* Admin.swift */,
+				84D03BB01E391A3B00B58916 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,6 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				84C72C081E38DC1F00B608A8 /* AuthServices.swift */,
+				84D03BAE1E3916FD00B58916 /* CompanyServices.swift */,
+				849879E21E39D19800092BC8 /* UserServices.swift */,
+				849879E41E39EBFE00092BC8 /* UserRequestServices.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -275,15 +296,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D03BAF1E3916FD00B58916 /* CompanyServices.swift in Sources */,
 				84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */,
+				849879E11E39CB9F00092BC8 /* CreatePostViewController.swift in Sources */,
+				849879DF1E39C5D400092BC8 /* Constant.swift in Sources */,
 				84C72C111E39023200B608A8 /* UserType.swift in Sources */,
 				8429A5931E38CF5900476288 /* TCButton.swift in Sources */,
 				84C72C0B1E38DD6B00B608A8 /* FirebaseRoutes.swift in Sources */,
+				84D03BB11E391A3B00B58916 /* Post.swift in Sources */,
 				84C72C0F1E38FEBA00B608A8 /* Company.swift in Sources */,
 				84C72C091E38DC1F00B608A8 /* AuthServices.swift in Sources */,
 				84C72C0D1E38F69300B608A8 /* Student.swift in Sources */,
+				84D03BAD1E3914F700B58916 /* Admin.swift in Sources */,
 				84C72C061E38D89700B608A8 /* User.swift in Sources */,
 				84595DE81E38C7F100566AC3 /* ViewController.swift in Sources */,
+				849879E51E39EBFE00092BC8 /* UserRequestServices.swift in Sources */,
+				849879E31E39D19800092BC8 /* UserServices.swift in Sources */,
 				84595DFA1E38CE3200566AC3 /* TTextField.swift in Sources */,
 				84595DE61E38C7F100566AC3 /* AppDelegate.swift in Sources */,
 			);
