@@ -86,7 +86,7 @@ class AuthServices {
                                 let stu = userObj! + Mapper<Student>().map(JSONObject: student.value!)!
                                 User.sharedUser.value = stu
                                 User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
-
+                                CompanyServices.listnerForCompanies()
                                 completion(stu, nil)
                             })
                         case .company:
@@ -99,7 +99,6 @@ class AuthServices {
                                 User.sharedUser.value = com
                                 User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
                                 CompanyServices.postlistner(cID: comId)
-                                CompanyServices.listnerForCompanies()
                                 UserServices.listnerForStudent()
                                 
                                 completion(com, nil)

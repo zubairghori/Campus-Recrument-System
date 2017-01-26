@@ -23,14 +23,13 @@ class ViewController: UIViewController {
         AuthServices.signIn(email: self.email.text!, password: "123456") { (user, error) in
             if error == nil{
                 if let stu = user as? Student{
-                    self.performSegue(withIdentifier: "createPost", sender: nil)
-                    
+                    self.performSegue(withIdentifier: "Student", sender: nil)
                 }
                 else if let com = user as? Company{
                     self.performSegue(withIdentifier: "company", sender: nil)
-                    
                 }else {
-                    
+                    self.performSegue(withIdentifier: "company", sender: nil)
+
                 }
             }else{
                 ErrorAlert(message: error!)

@@ -31,12 +31,13 @@ class UserRequestServices {
     
     static func userRequestListnerForCompany(cID:String,pID:String){
         self.ref.child("comapanies-User-Request/\(cID)/\(pID)").observe(.childAdded, with: { (userID) in
-            User.sharedUserIDRequest.value.append(userID.key)
+            User.sharedComapyIDRequest.value.append(userID.key)
         })
     }
-    static func userRequestListnerForStudent(cID:String,pID:String){
+    
+    static func userRequestListnerForStudent(cID:String){
         self.ref.child("user-Company-Request/\(User.sharedUser.value!.userID!)/\(cID)").observe(.childAdded, with: { (userID) in
-            User.sharedComapyIDRequest.value.append(userID.key)
+            User.sharedUserIDRequest.value.append(userID.key)
         })
     }
 }

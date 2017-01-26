@@ -22,7 +22,10 @@ class PostsViewController: UIViewController {
         }
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "POSTS"
+        
+    }
     
     func action(){
         performSegue(withIdentifier: "add", sender: nil)
@@ -44,5 +47,14 @@ extension PostsViewController:UITableViewDelegate , UITableViewDataSource{
         return User.posts.value.count
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            if let compnay = User.sharedUser.value as? Company{
+                indicatorStart()
+                AdminServices.deletePost(cID: compnay.companyId!, postID:Array(User.posts.value.keys)[indexPath.row] , ownerCompanyID: compnay.userID!)
+                indicatorStop()
+            }
+
+        }
+    }
 }

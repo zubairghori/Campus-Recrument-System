@@ -52,24 +52,29 @@ class CompanyServices {
         self.ref.child("company-Post/\(cID)").observe(.childAdded, with: { (post) in
             let postObj = Mapper<Post>().map(JSONObject: post.value!)
             postObj!.postID = post.key
+            UserRequestServices.userRequestListnerForCompany(cID: cID, pID: post.key)
             User.posts.value[post.key] = postObj
         })
         self.ref.child("company-Post/\(cID)").observe(.childRemoved, with: { (post) in
             User.posts.value.removeValue(forKey: post.key)
         })
     }
-    
+    static func postlistner(cID:String,completion:@escaping(_ error:String?)->Void){
+        self.ref.child("company-Post/\(cID)").observe(.childAdded, with: { (post) in
+            let postObj = Mapper<Post>().map(JSONObject: post.value!)
+            postObj!.postID = post.key
+            User.posts.value[post.key] = postObj
+            print(post.key)
+            completion(nil)
+        })
+    }
     static func listnerForCompanies(){
         rxOwner()
             .flatMap({ (user) -> Observable<Company> in
                 return rxOwnerCompany(user:user)
             })
             .subscribe { (user) in
-                if User.sharedCompanies.value[user.element!.userID!] == nil{
                    User.sharedCompanies.value[user.element!.userID!] = user.element!
-                }else{
-                    User.sharedCompanies.value[user.element!.userID!] = user.element!
-                }
         }
     }
     
@@ -90,6 +95,7 @@ class CompanyServices {
         return Observable.create { observer in
             self.ref.child("company/\(user.userID!)").observe(.childAdded, with: { (data) in
                 let stu = user + Mapper<Company>().map(JSONObject: data.value!)!
+                stu.companyId = data.key
                 observer.onNext(stu)
             })
             return Disposables.create {}

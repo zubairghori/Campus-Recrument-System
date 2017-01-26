@@ -16,7 +16,10 @@ class stuReqViewController: UIViewController {
         super.viewDidLoad()
 
         
-        User.sharedUserIDRequest.asObservable().subscribe { (posts) in
+        User.sharedComapyIDRequest.asObservable().subscribe { (posts) in
+            print(posts.element)
+            print(User.sharedStudents.value)
+
             for p in posts.element!{
                 self.users.append(User.sharedStudents.value[p]!)
             }
@@ -24,7 +27,10 @@ class stuReqViewController: UIViewController {
         }
     }
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "STUDENTS REQUEST"
+        
+    }
 
 }
 extension stuReqViewController:UITableViewDelegate , UITableViewDataSource{
@@ -41,6 +47,4 @@ extension stuReqViewController:UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-    
-    
 }
