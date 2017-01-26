@@ -35,15 +35,29 @@ class CreatePostViewController: UIViewController {
 //        User.sharedComapyIDRequest.asObservable().subscribe { (arr) in
 //            print("comReqID\(arr.element)")
 //        }
+        
+//        AdminServices.deletePost(cID: "-KbOjoOD6Ts4sa74Wj0A", postID: "-KbOkMMFA4thEjAMbpJl", ownerCompanyID: "fYez4wJft5aqnEWViK0PQ5r9S9n2")
+        
+//        let stu = Student(rollNo: "b11108810", cgpa: "3.2", year: 2020, courseName: "BCSE", name: "zubair waqar", email: "waqar@gmail.com", password: "123456", mobileNo: "03132635297", userType: .student)
+//
+//        UserServices.updateUserProfile(userObject: stu) { (error) in
+//            print(error)
+//        }
+        
     }
 
     @IBAction func createPost(_ sender: Any) {
+        
         if let company = User.sharedUser.value as? Company{
-            let post = Post(title: "Senior iOS Developer", description: "2+ experience required", salary: 50000, technology: "Swift 3")
+            let post = Post(title: "Most Senior iOS Developer", description: "2+ experience required", salary: 50000, technology: "Swift 3")
             let companyId = company.companyId!
-            CompanyServices.createPost(cID: companyId, post: post, completion: { (error) in
-                print(error)
-            })
+//            CompanyServices.createPost(cID: companyId, post: post, completion: { (error) in
+//                print(error)
+//            })
+//            
+//            CompanyServices.updatePost(cID: "-KbOjoOD6Ts4sa74Wj0A", pID: "-KbOkOMy96vqy3CA1als", post: post, completion: { (error) in
+//                
+//            })
         }
     }
     

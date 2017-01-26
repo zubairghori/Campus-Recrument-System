@@ -16,6 +16,23 @@ import RxSwift
 class CompanyServices {
     static var ref: FIRDatabaseReference! = FIRDatabase.database().reference()
 
+    
+    static func updatePost(cID:String,pID:String,post:Post,completion:@escaping (_ error:String?)->Void){
+        
+        let postObj: [String:Any] = ["title":post.title,"description":post.description!,"salary":post.salary!,"technology":post.technology!]
+        self.ref.child("company-Post/\(cID)/\(pID)").setValue(postObj) { (error, refrence) in
+                if error == nil{
+                    completion(nil)
+                }else{
+                    completion(error!.localizedDescription)
+                }
+        }
+    
+}
+
+    
+    
+    
     static func createPost(cID:String,post:Post,completion:@escaping (_ error:String?)->Void){
         
         let post: [String:Any] = ["title":post.title,"description":post.description!,"salary":post.salary!,"technology":post.technology!]
@@ -34,6 +51,7 @@ class CompanyServices {
     static func postlistner(cID:String){
         self.ref.child("company-Post/\(cID)").observe(.childAdded, with: { (post) in
             let postObj = Mapper<Post>().map(JSONObject: post.value!)
+            postObj!.postID = post.key
             User.posts.value = [post.key:postObj!]
         })
         self.ref.child("company-Post/\(cID)").observe(.childRemoved, with: { (post) in

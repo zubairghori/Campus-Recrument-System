@@ -84,8 +84,9 @@ class AuthServices {
                         case .student:
                             self.ref.child("acedemics/\(user!.uid)").observeSingleEvent(of: .value, with: { (student) in
                                 let stu = userObj! + Mapper<Student>().map(JSONObject: student.value!)!
-                                User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
                                 User.sharedUser.value = stu
+                                User.sharedUser.value?.userID = FIRAuth.auth()?.currentUser?.uid
+
                                 completion(stu, nil)
                             })
                         case .company:

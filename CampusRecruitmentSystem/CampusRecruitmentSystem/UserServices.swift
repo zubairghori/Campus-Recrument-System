@@ -16,7 +16,29 @@ import RxSwift
 
 class UserServices {
     static var ref: FIRDatabaseReference! = FIRDatabase.database().reference()
-
+    
+    
+    
+    static func updateUserProfile(userObject:Student,comletion:@escaping (_ error:String?)->Void){
+        let userDic:[String : Any] = ["userName":userObject.name,"emial":userObject.email!,"mobileNo":userObject.mobileNo!,"userType":userObject.userType!.hashValue]
+        
+        let acedemics: [String:Any] = ["rollNo":userObject.rollNo!,"cgpa":userObject.cgpa!,"year":userObject.year!,"courseName":userObject.courseName!]
+        let multiPath: [String:Any]  =
+            ["users/\(User.sharedUser.value!.userID!)" : userDic , "acedemics/\(User.sharedUser.value!.userID!)":acedemics]
+        
+        self.ref.updateChildValues(multiPath, withCompletionBlock: { (error, refrence) in
+            if error == nil{
+                comletion(nil)
+                User.sharedUser.value = userObject
+            }else{
+                comletion(error!.localizedDescription)
+                
+            }
+        })
+        
+    }
+    
+    
     
     static func listnerForStudent(){
         rxStudents()

@@ -19,10 +19,12 @@ class ViewController: UIViewController {
 
     @IBAction func login(_ sender: Any) {
   
-        AuthServices.signIn(email: "sadiq@gmail.com", password: "123456") { (user, error) in
+        AuthServices.signIn(email: "zubair@gmail.com", password: "123456") { (user, error) in
            
             if let stu = user as? Student{
                 print(stu.cgpa)
+                self.performSegue(withIdentifier: "createPost", sender: nil)
+
             }
             else if let com = user as? Company{
                 print(com.compmanyName)

@@ -19,6 +19,7 @@
 		849879E11E39CB9F00092BC8 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */; };
 		849879E31E39D19800092BC8 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E21E39D19800092BC8 /* UserServices.swift */; };
 		849879E51E39EBFE00092BC8 /* UserRequestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E41E39EBFE00092BC8 /* UserRequestServices.swift */; };
+		849879E71E39F90800092BC8 /* AdminServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849879E61E39F90800092BC8 /* AdminServices.swift */; };
 		84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */; };
 		84C72C061E38D89700B608A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C051E38D89700B608A8 /* User.swift */; };
 		84C72C091E38DC1F00B608A8 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C081E38DC1F00B608A8 /* AuthServices.swift */; };
@@ -48,6 +49,7 @@
 		849879E01E39CB9F00092BC8 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		849879E21E39D19800092BC8 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		849879E41E39EBFE00092BC8 /* UserRequestServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequestServices.swift; sourceTree = "<group>"; };
+		849879E61E39F90800092BC8 /* AdminServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminServices.swift; sourceTree = "<group>"; };
 		84C72C031E38D5D600B608A8 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
 		84C72C051E38D89700B608A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84C72C081E38DC1F00B608A8 /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				84D03BAE1E3916FD00B58916 /* CompanyServices.swift */,
 				849879E21E39D19800092BC8 /* UserServices.swift */,
 				849879E41E39EBFE00092BC8 /* UserRequestServices.swift */,
+				849879E61E39F90800092BC8 /* AdminServices.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				84D03BAF1E3916FD00B58916 /* CompanyServices.swift in Sources */,
 				84C72C041E38D5D600B608A8 /* StudentSignUpViewController.swift in Sources */,
+				849879E71E39F90800092BC8 /* AdminServices.swift in Sources */,
 				849879E11E39CB9F00092BC8 /* CreatePostViewController.swift in Sources */,
 				849879DF1E39C5D400092BC8 /* Constant.swift in Sources */,
 				84C72C111E39023200B608A8 /* UserType.swift in Sources */,
